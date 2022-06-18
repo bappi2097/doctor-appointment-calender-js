@@ -4,20 +4,147 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Doctor Appointment Calender</title>
+
+    <!-- materialize css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
+    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <div id="dropdown-component"></div>
+    <!-- Header Button Start -->
+    <div class="header_btns">
+      <div id="dropdown-component"></div>
+      <a class="btn modal-trigger" href="#create-modal">Create</a>
+    </div>
+    <!-- Header Button End -->
+
+    <!-- Calender -->
     <div class="calender" id="app"></div>
 
+    <!-- Create Modal Start -->
+    <form id="create-modal" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="input-field col s6">
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              class="validate"
+              required
+              maxlength="40"
+            />
+            <label for="firstName">First Name</label>
+            <span class="helper-text" data-error="Required"></span>
+          </div>
+          <div class="input-field col s6">
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              class="validate"
+              required
+              maxlength="40"
+            />
+            <label for="lastName">Last Name</label>
+            <span class="helper-text" data-error="Required"></span>
+          </div>
+          <div class="input-field col s6">
+            <input
+              id="Email"
+              name="email"
+              type="email"
+              class="validate"
+              required
+            />
+            <label for="Email">Email</label>
+            <span class="helper-text" data-error="Required"></span>
+          </div>
+          <div class="col s6">
+            <div class="row">
+              <p>
+                <label>
+                  <input
+                    id="male"
+                    name="gender"
+                    value="male"
+                    type="radio"
+                    checked
+                  />
+                  <span>Male</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input
+                    id="female"
+                    name="gender"
+                    value="female"
+                    type="radio"
+                  />
+                  <span>Female</span>
+                </label>
+              </p>
+            </div>
+          </div>
+          <div class="input-field col s6">
+            <input id="age" name="age" type="number" min="1" max="130" />
+            <label for="age">Age</label>
+          </div>
+          <div class="input-field col s6">
+            <input
+              id="date"
+              name="date"
+              type="date"
+              class="validate"
+              required
+            />
+            <label for="date">Date</label>
+            <span class="helper-text" data-error="Required"></span>
+          </div>
+          <div class="input-field col s6">
+            <input
+              id="time"
+              name="time"
+              type="time"
+              class="validate"
+              required
+            />
+            <label for="time">Time</label>
+            <span class="helper-text" data-error="Required"></span>
+          </div>
+        </div>
+      </div>
+      <div class="save-btn">
+        <button type="submit" class="waves-effect waves-green btn">
+          Submit
+        </button>
+      </div>
+    </form>
+    <!-- Create Modal End -->
+
+    <!-- View Modal Start -->
+    <div id="view-modal" class="modal">
+      <div class="modal-content" id="view-data"></div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat"
+          >Close</a
+        >
+      </div>
+    </div>
+    <!-- View Modal End -->
+
+    <!-- App js -->
     <script type="module" src="./js/app.js"></script>
-    <!-- Compiled and minified JavaScript -->
+
+    <!-- materialize js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

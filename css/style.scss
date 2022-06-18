@@ -1,3 +1,9 @@
+.header_btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
 .calender {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -7,12 +13,27 @@
         height: auto;
     }
 }
+
+.scrollbar {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        display: none;
+        background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #4b4b4b;
+        border-radius: 2px;
+    }
+}
+
 .date_item {
     display: grid;
     align-items: space-between;
     row-gap: 10px;
     padding: 5px;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #e8e8e8;
     & .date_item__no {
         padding: 10px;
         font-weight: bold;
@@ -21,22 +42,13 @@
         height: 80px;
         overflow-y: hidden;
         padding: 0px 5px;
-        &:hover{
+        &:hover {
             overflow-y: auto;
         }
-        &::-webkit-scrollbar {
-            width: 4px;
-        }
-        &::-webkit-scrollbar-track {
-            display: none;
-            background: #ffffff;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: rgb(0, 0, 0);
-            border-radius: 20%;
-        }
+        @extend .scrollbar;
     }
 }
+
 .appointment_item {
     width: 100%;
     display: grid;
@@ -44,8 +56,20 @@
     margin-bottom: 3px;
 }
 
-.badge{
-    &::after{
-        content: none!important;
+.badge {
+    &::after {
+        content: none !important;
+    }
+}
+
+.modal {
+    @extend .scrollbar;
+}
+
+.save-btn {
+    display: flex;
+    justify-content: center;
+    & button {
+        margin: 10px;
     }
 }

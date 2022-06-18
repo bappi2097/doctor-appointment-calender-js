@@ -1,3 +1,9 @@
+.header_btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 .calender {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -8,12 +14,24 @@
   height: auto;
 }
 
+.scrollbar::-webkit-scrollbar, .modal::-webkit-scrollbar, .date_item .date_item_appointment::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar::-webkit-scrollbar-track, .modal::-webkit-scrollbar-track, .date_item .date_item_appointment::-webkit-scrollbar-track {
+  display: none;
+  background: #ffffff;
+}
+.scrollbar::-webkit-scrollbar-thumb, .modal::-webkit-scrollbar-thumb, .date_item .date_item_appointment::-webkit-scrollbar-thumb {
+  background: #4b4b4b;
+  border-radius: 2px;
+}
+
 .date_item {
   display: grid;
   align-items: space-between;
   row-gap: 10px;
   padding: 5px;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
 }
 .date_item .date_item__no {
   padding: 10px;
@@ -27,17 +45,6 @@
 .date_item .date_item_appointment:hover {
   overflow-y: auto;
 }
-.date_item .date_item_appointment::-webkit-scrollbar {
-  width: 4px;
-}
-.date_item .date_item_appointment::-webkit-scrollbar-track {
-  display: none;
-  background: #ffffff;
-}
-.date_item .date_item_appointment::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-  border-radius: 20%;
-}
 
 .appointment_item {
   width: 100%;
@@ -48,4 +55,12 @@
 
 .badge::after {
   content: none !important;
+}
+
+.save-btn {
+  display: flex;
+  justify-content: center;
+}
+.save-btn button {
+  margin: 10px;
 }/*# sourceMappingURL=style.css.map */
