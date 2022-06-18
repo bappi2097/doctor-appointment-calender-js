@@ -185,6 +185,10 @@ const viewModal = (date, index) => {
       );
       instance.close();
       setCalender();
+      const inputRadioCollection = createForm.querySelectorAll("input");
+      for (let i = 0; i < inputRadioCollection.length; i++) {
+        inputRadioCollection[i].value = "";
+      }
     }
   };
 
