@@ -1,0 +1,51 @@
+.calender {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 20px;
+  padding: 10px;
+}
+.calender .calender__date {
+  height: auto;
+}
+
+.date_item {
+  display: grid;
+  align-items: space-between;
+  row-gap: 10px;
+  padding: 5px;
+  border: 1px solid #E8E8E8;
+}
+.date_item .date_item__no {
+  padding: 10px;
+  font-weight: bold;
+}
+.date_item .date_item_appointment {
+  height: 80px;
+  overflow-y: hidden;
+  padding: 0px 5px;
+}
+.date_item .date_item_appointment:hover {
+  overflow-y: auto;
+}
+.date_item .date_item_appointment::-webkit-scrollbar {
+  width: 4px;
+}
+.date_item .date_item_appointment::-webkit-scrollbar-track {
+  display: none;
+  background: #ffffff;
+}
+.date_item .date_item_appointment::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 20%;
+}
+
+.appointment_item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 3px;
+}
+
+.badge::after {
+  content: none !important;
+}/*# sourceMappingURL=style.css.map */
