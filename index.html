@@ -21,7 +21,7 @@
     <!-- Header Button Start -->
     <div class="header_btns">
       <div id="dropdown-component"></div>
-      <a class="btn modal-trigger" href="#create-modal">Create</a>
+      <button id="create-button" class="btn modal-trigger">Create</button>
     </div>
     <!-- Header Button End -->
 
@@ -29,105 +29,7 @@
     <div class="calender" id="app"></div>
 
     <!-- Create Modal Start -->
-    <form id="create-modal" class="modal">
-      <div class="modal-content">
-        <div class="row">
-          <div class="input-field col s6">
-            <input
-              id="firstName"
-              name="firstName"
-              type="text"
-              class="validate"
-              required
-              maxlength="40"
-            />
-            <label for="firstName">First Name</label>
-            <span class="helper-text" data-error="Required"></span>
-          </div>
-          <div class="input-field col s6">
-            <input
-              id="lastName"
-              name="lastName"
-              type="text"
-              class="validate"
-              required
-              maxlength="40"
-            />
-            <label for="lastName">Last Name</label>
-            <span class="helper-text" data-error="Required"></span>
-          </div>
-          <div class="input-field col s6">
-            <input
-              id="Email"
-              name="email"
-              type="email"
-              class="validate"
-              required
-            />
-            <label for="Email">Email</label>
-            <span class="helper-text" data-error="Required"></span>
-          </div>
-          <div class="col s6">
-            <div class="row">
-              <p>
-                <label>
-                  <input
-                    id="male"
-                    name="gender"
-                    value="male"
-                    type="radio"
-                    checked
-                  />
-                  <span>Male</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input
-                    id="female"
-                    name="gender"
-                    value="female"
-                    type="radio"
-                  />
-                  <span>Female</span>
-                </label>
-              </p>
-            </div>
-          </div>
-          <div class="input-field col s6">
-            <input id="age" name="age" type="number" min="1" max="130" />
-            <label for="age">Age</label>
-          </div>
-          <div class="input-field col s6">
-            <input
-              id="date"
-              name="date"
-              type="date"
-              class="validate"
-              required
-            />
-            <label for="date">Date</label>
-            <span class="helper-text" data-error="Required"></span>
-          </div>
-          <div class="input-field col s6">
-            <input
-              id="time"
-              name="time"
-              type="time"
-              class="validate"
-              required
-            />
-            <label for="time">Time</label>
-            <span class="helper-text" data-error="Required"></span>
-          </div>
-        </div>
-      </div>
-      <div class="save-btn">
-        <button type="submit" class="waves-effect waves-green btn">
-          Submit
-        </button>
-      </div>
-    </form>
+    <form id="create-modal" class="modal"></form>
     <!-- Create Modal End -->
 
     <!-- View Modal Start -->
